@@ -15,17 +15,23 @@ data-files:
     gui/rtit.glade
 
 executable rtit
-    main-is: Main.hs
-    build-depends:
-        base ==4.8.*,
-        glib -any,
-        gtk3 -any,
-        haxl -any,
-        mtl -any,
-        bytestring -any,
-        array -any,
-        text -any,
-        htesseract-ocr -any,
-        hflags
+  main-is: Main.hs
+  -- other-modules:       
+  build-depends:
+    base ==4.8.*,
+    glib -any,
+    gtk3 -any,
+    haxl -any,
+    mtl -any,
+    bytestring -any,
+    array -any,
+    text,
+    wreq,
+    lens,
+    lens-aeson,
+    vector,
+    aeson,
+    htesseract-ocr -any,
+    hflags
     hs-source-dirs: src
 
